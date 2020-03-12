@@ -1,0 +1,12 @@
+<resources>
+    <string name="EV_DownloadStarted">Downloading the Firmware ...\n</string>
+    <string name="EV_DownloadFinishedFailed">Downloading the Firmware failed.\n</string>
+    <string name="EV_DownloadFinishedSuccess">Downloading the Firmware was successful.\nNow wait until the device communicates.\n</string>
+    <string name="EV_FlashFinishedFailed">Storing the Firmware failed.\n</string>
+    <string name="EV_FlashFinishedSuccess">Storing the Firmware was succesful.\nNew Version: </string>
+    <string name="EV_Validating">Validating device and firmware ...\n</string>
+    <string name="EV_NothingToDo">Firmware is already correct.\n</string>
+    <string name="EV_FlashStillRunning">Still waiting for the device to come back online ...\n</string>
+    <string name="EV_ConnectionStatus">Connected...\n</string>
+    <string name="EV_ConnectionStatusBad">Could not open the port/device.\nNot connected.\n</string>
+</resources>

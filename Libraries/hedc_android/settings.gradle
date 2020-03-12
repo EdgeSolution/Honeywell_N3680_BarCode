@@ -1,0 +1,1 @@
+include ':hedc', ':hedc_usb_com', ':ScanBarCode'

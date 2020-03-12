@@ -1,0 +1,27 @@
+<resources>
+    <string name="ERROR_SUCCESS">Success</string>
+    <string name="ERROR_COMMUNICATION">There is a communication problem with the device</string>
+    <string name="ERROR_PORT_NOT_OPEN">Port/device open failed (is it in use by someone else?)</string>
+    <string name="ERROR_CANCELED_BY_REOTE">The device aborted the receive of the firmware</string>
+    <string name="ERROR_NO_SYNC">Device did not respond with XModem requests</string>
+    <string name="ERROR_XMIT_ERROR">A transmit error occurred</string>
+    <string name="ERROR_NO_FW_FILE">This is not a valid firmware file</string>
+    <string name="ERROR_PARSE_FILE">This is not a valid firmware file</string>
+    <string name="ERROR_FILE_TO_BIG">This firmware is too big for this device</string>
+    <string name="ERROR_FLASH_FAILED">Storing the firmware into the flash rom failed</string>
+    <string name="ERROR_FLASH_UNSURE">Flashing seemed to work, but device does not respond</string>
+    <string name="ERROR_FLASH_NO_RESPOND">We got no ACK after the storing, but could communicate with the device</string>
+    <string name="ERROR_FILE_NOT_FOUND">File not found</string>
+    <string name="ERROR_READ_FAULT">File could not be read</string>
+    <string name="ERROR_NOT_ENOUGH_MEMORY">Not enough memory</string>
+    <string name="ERROR_INVALID_PARAMETER">Parameter is not valid</string>
+    <string name="ERROR_NOT_SUPPORTED">Function not implemented</string>
+    <string name="ERROR_AUTOSELECT_FAILED">Propably more than one device is connected, so autoselect needs help.</string>
+    <string name="ERROR_CMD_UNKNOWN">Command not implemented in device</string>
+    <string name="ERROR_CMD_FAILED">Command returned error (parameter bad?)</string>
+    <string name="ERROR_FRAMEWORK_FAILED">Fatal Error" Framework (MFC/QT) initialization failed</string>
+    <string name="ERROR_GETMODUL_FAILED">Fatal Error" GetModuleHandle failed</string>
+    <string name="ERROR_CANCELED_BY_USER">Aborted by user</string>
+    <string name="ERROR_CANCELED_BY_REMOTE">The device aborted the receive of the firmware</string>
+    <string name="ERROR_UNKNOWN">Unknown error</string>
+</resources>

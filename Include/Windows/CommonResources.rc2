@@ -1,0 +1,4 @@
+
+#include "HsmResources.rc2"
+#include "dfusblib.rc"
+#include "svn_rev.h"	// get revision info from Subversion created file

@@ -1,0 +1,40 @@
+
+#include "afxres.h"
+#include "HsmResources.h"
+
+IDD_ABOUTBOX DIALOGEX 75, 60, 255, 133
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,190,40,53,15,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,19,34,21,20
+    LTEXT           "AppName",IDC_ABOUT_APP,57,14,108,8,NOT WS_GROUP
+    LTEXT           "HEDC",IDC_ABOUT_PRODUCT,57,26,119,9,SS_NOPREFIX
+    LTEXT           "Vxx",IDC_ABOUT_VERSION,57,36,105,8
+    LTEXT           "Honeywell",IDC_ABOUT_COMPANY,57,45,105,8,SS_NOPREFIX
+    LTEXT           "All Rights Reserved.",IDC_STATIC,57,63,69,8
+    LTEXT           "Copyright 2005..2019",IDC_ABOUT_COPYRIGHT,57,54,94,8,NOT WS_GROUP
+    LTEXT           "Credits:",IDC_STATIC,57,73,24,8
+    LTEXT           "Misc. Parts:\nwww.codeproject.com\nwww.codeguru.com\nDieter Fauth",IDC_STATIC,57,83,128,36
+END
+
+STRINGTABLE 
+BEGIN
+	IDS_FORMAT_1F           "TIFF Binary"
+	IDS_FORMAT_2F           "TIFF Binary G4 Compressed"
+	IDS_FORMAT_3F           "TIFF Grayscale"
+	IDS_FORMAT_5F           "RAW Grayscale"
+	IDS_FORMAT_6F           "JPEG Grayscale"
+	IDS_FORMAT_8F           "BMP Grayscale"
+	IDS_FORMAT_10F		    "TIFF Color compressed"
+	IDS_FORMAT_11F		    "TIFF Color uncompressed"
+	IDS_FORMAT_12F		    "JPEG Color"
+	IDS_FORMAT_14F		    "BMP Color"
+	IDS_DDXFILE_TT_MODIFY   "Browse for files"
+	IDS_DDXFILE_EDIT_TEXT   "..."
+	IDS_DDXFILE_REQUIRE_VALID_FILE "Please select a valid filename"
+	IDS_DDXFILE_OVERWRITE_PROMPT
+	"%1\nThis file already exists.\nReplace existing file?"
+END
+
