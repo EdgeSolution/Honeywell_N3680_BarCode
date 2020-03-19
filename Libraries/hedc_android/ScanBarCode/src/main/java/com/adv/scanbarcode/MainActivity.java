@@ -115,7 +115,11 @@ public class MainActivity extends Activity implements HEDCUsbCom.OnConnectionSta
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        mqttMessageReceiver.autoRepBuilder(mqttClientId,"report_data",jsonObj.toString());
+        if(mqttMessageReceiver != null) {
+            mqttMessageReceiver.autoRepBuilder(mqttClientId, "report_data", jsonObj.toString());
+        }else{
+            Toast.makeText(mContext,"Mqtt is not connected therefore does not report data to the web!",Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
