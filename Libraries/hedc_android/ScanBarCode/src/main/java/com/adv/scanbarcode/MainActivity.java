@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -44,6 +45,7 @@ public class MainActivity extends Activity implements HEDCUsbCom.OnConnectionSta
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.textview);
+        textView.setMovementMethod(ScrollingMovementMethod.getInstance());
         Log.d(TAG,"onCreate");
 
         m_engine = new HEDCUsbCom(this,this,this,this, this);
@@ -65,7 +67,7 @@ public class MainActivity extends Activity implements HEDCUsbCom.OnConnectionSta
                     try {
                         //String command = "ps |grep mosquitto";
                         String command = "ps";
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                             String mosquittoIsRunning = getSystemStringProperties(MainActivity.this,"adv.mosquittoIsRunning","false");
                             if (mosquittoIsRunning != null && !mosquittoIsRunning.isEmpty() && mosquittoIsRunning.equals("true")) {
                                 break;
@@ -118,7 +120,8 @@ public class MainActivity extends Activity implements HEDCUsbCom.OnConnectionSta
     public void OnBarcodeData(byte[] data, int length) {
         String barcodeData = ConvertToString(data, length);
         Log.d(TAG, "barcodeData: " + barcodeData);
-        textView.append(barcodeData + "\n");
+        //textView.append(barcodeData + "\n");
+        refreshTextView(barcodeData+"\n");
         JSONObject jsonObj = new JSONObject();
         try {
             jsonObj.put("barcodeData", barcodeData);
@@ -222,5 +225,13 @@ public class MainActivity extends Activity implements HEDCUsbCom.OnConnectionSta
             ret = def;
         }
         return ret;
+    }
+
+    void refreshTextView(String msg){
+        textView.append(msg);
+        int offset = textView.getLineCount()*textView.getLineHeight();
+        if(offset>textView.getHeight()){
+            textView.scrollTo(0,offset-textView.getHeight());
+        }
     }
 }
